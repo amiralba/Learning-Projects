@@ -19,7 +19,7 @@ class Board:
         return False    
 
     def check_winner(self, marker):
-        #rows
+        #row
         for row in self.board:
             if all(cell==marker for cell in row):
                 return True
