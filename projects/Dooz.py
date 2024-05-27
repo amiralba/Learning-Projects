@@ -58,7 +58,7 @@ def main():
     players= [player1, player2]
     current_player_index = 0
 
-    Board.print_board()
+    board.print_board()
 
 
     while True:
@@ -70,7 +70,7 @@ def main():
                 row = int(input("Enter row (0, 1 , 2): "))
                 col = int(input("Enter col (0, 1, 2): "))
                 if 0 <= row <= 2 and 0<= col <= 2:
-                    if Board.place_marker(row, col, current_player.symbol):
+                    if board.place_marker(row, col, current_player.symbol):
                         break
                     else:
                         continue
