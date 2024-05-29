@@ -30,7 +30,7 @@ class Board:
         #zabdari
         if all(self.board[i][i] == marker for i in range(3)):
             return True
-        if all(self.board[i][2-i] for i in range(3)):
+        if all(self.board[i][2-i] == marker for i in range(3)):
             return True
         return False
     
