@@ -14,8 +14,8 @@ class Board:
         if self.board[row][col] == '_':
             self.board[row][col] = marker
             return True
-        else:
-            print("Cell already taken, Try Again.")
+        
+        print("Cell already taken, Try Again.")
         return False    
 
     def check_winner(self, marker):
@@ -42,7 +42,7 @@ class Board:
 #PLAYERS
 
 class Player:
-    def __init__(self,name, symbol):
+    def __init__(self,name: str, symbol: str):
         self.name = name
         self.symbol = symbol
 
@@ -56,13 +56,13 @@ def main():
     player1 = Player(player1_name, "X")
     player2 = Player(player2_name, "O")        
     players= [player1, player2]
-    current_player_index = 0
 
     board.print_board()
 
-
-    while True:
+    def turn(current_player_index: int):
         current_player = players[current_player_index]
+        current_player_index = (current_player_index + 1) % 2
+        board.print_board()
         print(f"{current_player.name}'s turn.")
 
         while True:
@@ -71,6 +71,7 @@ def main():
                 col = int(input("Enter col (0, 1, 2): "))
                 if 0 <= row <= 2 and 0<= col <= 2:
                     if board.place_marker(row, col, current_player.symbol):
+                        turn(current_player_index)
                         break
                     else:
                         continue
@@ -79,18 +80,23 @@ def main():
             except ValueError:
                 print("Invalid input. Enter a number between 0 to 2")
 
-        board.print_board()
+            if board.check_winner(current_player.symbol):
+                print(f"{current_player.name} wins!")
+                break
+            if board.is_full():
+                print("It's draw!")
+                break 
 
-        if board.check_winner(current_player.symbol):
-            print(f"{current_player.name} wins!")
-            break
-        if board.is_full():
-            print("It's draw!")
-            break 
+            #switch turns
+            turn(current_player_index)
+    turn(0)
 
-        #switch turns
 
-        current_player_index = (current_player_index + 1) % 2
+    # while True:
+    #     current_player = players[current_player_index]
+    #     print(f"{current_player.name}'s turn.")
+
+        
 
 
 if __name__ == "__main__":
