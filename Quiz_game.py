@@ -54,7 +54,7 @@ def main() -> None:
             score += 5
         else:
             print("Incorrect. The correct answer is " + question[2])
-    return print(f"Your total score is {score} from 20 possible score")
+    return print(f"Your total score is {score} from 25 possible score")
         
 
 if __name__ == '__main__':  
