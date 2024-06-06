@@ -42,8 +42,6 @@ def get_valid_in(ans: str) -> str:
     else:
         return print("Invalid input,please only use alphabet letters less than 100 characters")
     
-if __name__ == '__main__':  
-    print(type(get_valid_in("hell0")))
 
 def main() -> None:
     score = 0
