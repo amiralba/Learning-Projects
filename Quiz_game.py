@@ -37,7 +37,7 @@ def view() -> list:
 
 def get_valid_in(ans: str) -> str:
     answer: str = input(ans)
-    if len(answer) < 100 and answer.isalpha():
+    if len(answer) < 100:
         return answer
     else:
         return print("Invalid input,please only use alphabet letters less than 100 characters")
