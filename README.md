@@ -1,8 +1,7 @@
 # Amir-Learning Repository
 
 Welcome to the **Amir-Learning Repository**! 🎉
-
-This repository is a showcase of my journey into coding and software development, featuring various small apps and games that helped me grasp foundational concepts and grow my skills.
+This repository showcases my journey into coding and software development using technologies like **Python, TypeScript, Django, and various libraries and frameworks**.
 
 ---
 
@@ -13,6 +12,7 @@ Here’s a breakdown of the projects included in this repository:
 ### **Mini Games**
 - **`quiz_game`**: A quiz application designed to test knowledge and improve logic-building skills.
 - **`typing_game`**: A fun typing speed challenge that practices Python fundamentals and timing functionalities.
+- **`blackjack`**: A command-line Blackjack game built with **TypeScript**. This project focuses on object-oriented programming, TypeScript syntax, and game logic, providing a fun way to simulate a simplified version of the classic card game.
 
 ### **Utility Apps**
 - **`password_manager`**: A secure tool for storing and managing passwords efficiently.
